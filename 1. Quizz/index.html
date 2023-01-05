@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<h1> Quizz  culture Generale </h1>
+    <div class="container-global">
+        <form  class="form-quizz">
+
+            <div class="question-block">
+                <h4>Quelle est la capitale du Senegal</h4>
+                <div>
+                    <input type="radio" name="q1" id="Dakar" value="a" checked>
+                    <label for="Dakar">Dakar</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="q1" id="Thies" value="b" checked>
+                    <label for="Thies">Thies</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="q1" id="Saint-louis" value="c" >
+                    <label for="Saint-louis">Saint-louis</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="q1" id="Casamance" value="d" >
+                    <label for="Casamance">Casamance</label>
+                </div>
+            </div>
+            
+            <div class="question-block">
+                <h4>Quelle est la capitale du Mali</h4>
+                <div>
+                    <input type="radio" name="q2" id="Bamako" value="a" checked>
+                    <label for="Bamako">Bamako</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="q2" id="Mbour" value="b" >
+                    <label for="Mbour">Mbour</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="q2" id="Saly" value="c" >
+                    <label for="Saly">Saly</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="q2" id="Singapour" value="d" >
+                    <label for="Singapour">Singapour</label>
+                </div>
+            </div>
+            <button type="submit" >Validez vos choix !</button>
+        </form>
+    </div>
+    
+    <div class="resultats">
+        <h2>Cliquez sur valider pour voir les résultats.</h2>
+        <p class="aide"></p>
+        <p class="note"></p>
+      </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
