@@ -32,7 +32,7 @@ function verifFunc (tabResultats) {
     for(let a = 0; a < 2; a++){
 
         if(tabResultats[a] === reponses[a]) {
-            verifTableau.push(true);
+            verifTableau.push(true); // ajout dans notre tab true or false
         } else {
             verifTableau.push(false);
         }
