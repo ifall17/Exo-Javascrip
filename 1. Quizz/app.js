@@ -40,6 +40,7 @@ function verifFunc (tabResultats) {
     }
 
     afficherResultats(verifTableau);
+    couleursFonction(verifTableau);
     verifTableau=[];
 }
 
@@ -50,14 +51,17 @@ function afficherResultats (checkk){
 
     switch(nbrfaux){
 
-        case 0 :
+        case 0:
             titreResultat.innerText = ` Bravo vous avez trouve ${emojis[0]}`;
             noteResultat.innerText = '2/2';
         break;
-        case 1 :
+        case 1:
             titreResultat.innerText = `Allez faire des recherches ${emojis[4]}`;
             noteResultat.innerText = '1/2';
         break;
+        case 2:
+            titreResultat.innerText = `Vous avez trouve aucune question ${emojis[3]}`;
+            noteResultat.innerHTML = '0/0';
 
 
 
@@ -66,6 +70,33 @@ function afficherResultats (checkk){
 
 
 }
+
+
+function couleursFonction(tabValBool) {
+
+    for(let j = 0; j < tabValBool.length; j++){
+
+        if(tabValBool[j] === true){
+            toutesLesQuestions[j].style.background = 'lightgreen';
+        } else {
+            toutesLesQuestions[j].style.background = '#ffb8b8';
+            toutesLesQuestions[j].classList.add('echec');
+
+            setTimeout(() => {
+                toutesLesQuestions[j].classList.remove('echec');
+            }, 500)
+        }
+        
+    }
+
+}
+
+toutesLesQuestions.forEach(item => {
+    item.addEventListener('click', () => {
+        item.style.background = "white";
+    })
+})
+
 
 
 
