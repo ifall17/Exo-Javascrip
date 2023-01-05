@@ -39,6 +39,37 @@ function verifFunc (tabResultats) {
 
     }
 
-    
+    afficherResultats(verifTableau);
     verifTableau=[];
 }
+
+function afficherResultats (checkk){
+
+    const nbrfaux = checkk.filter(el => el !== true).length;
+    //console.log(nbrfaux); 
+
+    switch(nbrfaux){
+
+        case 0 :
+            titreResultat.innerText = ` Bravo vous avez trouve ${emojis[0]}`;
+            noteResultat.innerText = '2/2';
+        break;
+        case 1 :
+            titreResultat.innerText = `Allez faire des recherches ${emojis[4]}`;
+            noteResultat.innerText = '1/2';
+        break;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+/* InnerText nous permet d'envoyer ou de recevoir un text ,
+mais certains navigateurs ne le supporte pas, pour cela on peut use
+textcontent*/
