@@ -5,7 +5,7 @@ let resultatsApi;
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
 
-        //console.log(position);
+        console.log(position);
         let long = position.coords.longitude;
         let lat = position.coords.latitude;
         appelApi(long,lat);
@@ -21,14 +21,16 @@ function appelApi (long,lat){
 
     //console.log(long,lat)
 
-    fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${cleapi}`)
-    .then ((reponse) => {
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${cleapi}`)
+    
+      .then ((reponse) => {
         return reponse.json();
     })
-    .then( (data => {
+      .then( (data => { 
         console.log(data);
     })
 
     )
 
 }
+
