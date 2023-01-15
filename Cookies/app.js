@@ -1,8 +1,10 @@
 const affichage = document.querySelector('.affichage');
 const inputs = document.querySelectorAll('input');
 const btns = document.querySelectorAll('button');
-const info = document.querySelector('.info_txt')
+const infoTxt = document.querySelector('.info_txt')
 const today = new Date();
+
+let dejafai = false;
 
 //.log(inputs);
 
@@ -55,7 +57,28 @@ function btnAction (x) {
 
 function creerCookie(name, value, exp){
 
+    let cookies = document.cookie.split(";");
+     cookies.forEach(cookie => {
+        formatecoo = cookie.split("=");
+        if (formatecoo[0] === encodeURIComponent(name)){
+            dejafai = true;
 
+        }
+     })
+
+    if (dejafai){
+         alert ("Cookie deja cree");
+         dejafai = false;
+         return;
+    }
+
+
+
+    if (name.length === 0){
+         alert ( " Impossible de creer une cookie vide")
+        return;
+    }
+    
     document.cookie= `${encodeURIComponent(name)}=${encodeURIComponent(value)};expires=${exp.toUTCString()}`; // ici in a notre cookie avec comme cle le nom et une date d'expiration
     
     let info = document.createElement('li');
