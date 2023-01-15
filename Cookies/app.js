@@ -88,3 +88,22 @@ function creerCookie(name, value, exp){
         info.remove();
     }, 2000)
 }
+
+
+function listCookies(){
+    let cookies = document.cookie.split(';');
+
+    if (cookies.join() === ""){
+        alert("Vous n' avez pas cree de cookie");
+        return;
+    }
+
+    cookies.forEach(cookie => {
+        cookie = cookie.trim()
+        formatecoo = cookie.split("=");
+        let item = document.createElement('li');
+        item.innerText = `Nom  ${decodeURIComponent(formatecoo[0])}, valeur ${decodeURIComponent(formatecoo[1])}`;
+        affichage.appendChild(item);
+
+    })
+}
