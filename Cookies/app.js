@@ -51,6 +51,17 @@ function btnAction (x) {
     else if (description === "affiche") {
         listCookies();
     }
+}
+
+function creerCookie(name, value, exp){
 
 
+    document.cookie= `${encodeURIComponent(name)}=${encodeURIComponent(value)};expires=${exp.toUTCString()}`; // ici in a notre cookie avec comme cle le nom et une date d'expiration
+    
+    let info = document.createElement('li');
+    info.innerText = `Cookie ${name} cree`;
+    affichage.appendChild(info);
+    setTimeout(()=> {
+        info.remove();
+    }, 2000)
 }
