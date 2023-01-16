@@ -20,3 +20,51 @@ h2{
     font-size: 2vw;
 }
 
+.affichage{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    width: 70%;
+    max-width: 900px;
+    min-width: 500px;
+    margin: 50px auto;
+}
+.bloc{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    padding: 40px;
+}
+
+.bloc p:nth-child(1) {
+    /*Notre premier paragraphe de nos blocs*/
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+.bloc:nth-child(1) {
+    
+    border-right: 1px solid #333; 
+}
+
+.containers-btns{
+    margin : 10px auto;
+    width: 70%;
+    max-width: 900px;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    display:block;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
