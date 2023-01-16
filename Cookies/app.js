@@ -1,3 +1,4 @@
+
 const affichage = document.querySelector('.affichage');
 const inputs = document.querySelectorAll('input');
 const btns = document.querySelectorAll('button');
@@ -102,7 +103,7 @@ function listCookies(){
         cookie = cookie.trim()
         formatecoo = cookie.split("=");
         let item = document.createElement('li');
-        item.innerText = `Nom  ${decodeURIComponent(formatecoo[0])}, valeur ${decodeURIComponent(formatecoo[1])}`;
+        item.innerText = `Nom${decodeURIComponent(formatecoo[0])}, valeur ${decodeURIComponent(formatecoo[1])}`;
         affichage.appendChild(item);
 
     })
