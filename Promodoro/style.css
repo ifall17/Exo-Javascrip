@@ -8,3 +8,15 @@ body {
     background: linear-gradient(to right, #70e1f5, #ffd194);
     font-family: Arial, Helvetica, sans-serif;
 }
+h1{
+    text-align: center;
+    margin: 25px 0px;
+    font-size: 50px;
+}
+
+h2{
+    text-align: center;
+    margin: 25px 0px;
+    font-size: 2vw;
+}
+
