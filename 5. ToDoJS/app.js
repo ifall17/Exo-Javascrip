@@ -12,8 +12,8 @@ let lesTaches = [];
 form.addEventListener(('submit'), event => {
     event.preventDefault(); // apres avoir enregistrer la page ne va pas se raffraichir
 
-    let text = input.value.trim();
-    console.log("log de notre texte", text);
+    let text = input.value.trim(); // tri() permet d'enlever les espaces avant et apres notre tache
+    // console.log("log de notre texte", text);
 
     if (text !== ''){
         rajouterUneTache(text);
@@ -26,17 +26,17 @@ function rajouterUneTache(text) {
         text,
         id : Date.now()
     }
-    console.log("log de notre todo: ",todo);
+    // console.log("log de notre todo: ",todo);
     afficherTache(todo);
 }
 
 function afficherTache(todo){
 
     const item = document.createElement('li');
-    item.setAttribute('data-key', todo.id);
+    item.setAttribute('data-key', todo.id); // data-key = todo.id
 
-    const input = document.createElement('input');
-    input.setAttribute('type','checkbox');
+    const input = document.createElement('input'); 
+    input.setAttribute('type','checkbox'); // checkbox pour montrer que la tache a ete faite
     input.addEventListener('click', tacheFaite);
 
     item.appendChild(input);
@@ -58,7 +58,13 @@ function afficherTache(todo){
 }
 
 function tacheFaite(e){
-    e.target.parentNode.classList.toggle('finDeTache')
+    e.target.parentNode.classList.toggle('finDeTache') 
+    /* e.target = le button
+    parentNode = li 
+    classList.toggle= prend en charge l'ajout et la suppression de classes CSS, 
+    qu'elles existent ou non dans votre tableau avec des lignes de code plus courtes. 
+    
+    */
 }
 
 function supprimerTache(e){
